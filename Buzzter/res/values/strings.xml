@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BuzzterMovil</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="prueba_usuario">JEscalante</string>
+    <string name="prueba_tipo">Serie</string>
+    <string name="prueba_tiempo">Hace 30 min</string>
+    <string name="prueba_titulo">Titulo primera publicación</string>
+    <string name="prueba_descripcion">Una pequeña descripción aqui.....</string>
+    <string name="prueba_comentarios">10</string>
+    <string name="prueba_likes">5</string>
+    <string name="prueba_ver_mas">ver más</string>
+    <string name="prueba_comentario">Comentario cualquier cosaComentario cualquier cosaComentario cualquier cosaComentario cualquier cosaComentario cualquier cosaComentario cualquier cosa</string>
+    <string name="title_activity_prueba">Prueba</string>
+	
+    <string-array name="array_publicaciones">
+        <item>Chromecast ya disponible en España por 35€</item>
+        <item>Pocket llega en español, analizando mejor los artículos guardados</item>
+        <item>Pixar ya está trabajando en The Incredibles 2 y Cars 3</item>
+        <item>Metal Gear Solid V: Ground Zeroes se puede completar en apenas 10 minutos</item>
+    </string-array>
+</resources>

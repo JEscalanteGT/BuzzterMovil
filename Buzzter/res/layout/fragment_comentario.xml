@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:orientation="horizontal" >
+
+	<ImageView
+	    android:id="@+id/imageView1"
+	    android:layout_width="64dp"
+	    android:layout_height="64dp"
+	    android:layout_marginRight="5dp"
+	    android:src="@drawable/ic_launcher" />
+
+	<LinearLayout 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical">
+	    <RelativeLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal" >
+			<TextView
+			    android:id="@+id/txt_usuario"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentLeft="true"
+			    android:layout_alignParentTop="true"
+			    android:text="@string/prueba_usuario"
+			    android:textAppearance="?android:attr/textAppearanceMedium" />
+			<TextView
+			    android:id="@+id/txt_tiempo"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentRight="true"
+			    android:layout_alignParentTop="true"
+			    android:text="@string/prueba_tiempo"
+			    android:textAppearance="?android:attr/textAppearanceSmall" />
+			
+	    </RelativeLayout>
+		<TextView
+	                android:id="@+id/txt_comentario"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_marginTop="5dp"
+	                android:text="@string/prueba_comentario"
+	                android:textAppearance="?android:attr/textAppearanceMedium"
+	                android:textColor="#555" />
+	</LinearLayout>
+	
+</LinearLayout>
