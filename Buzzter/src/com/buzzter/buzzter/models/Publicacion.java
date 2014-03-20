@@ -7,12 +7,13 @@ public class Publicacion {
 	private String publicacion_titulo;
 	private String publicacion_descripcion;
 	private String publicacion_fecha;
-	private String publicacion_tipo;
-	public Publicacion(String username, String fecha,String publicacion_titulo, String publicacion_descripcion){
+	private String publicacion_tag;
+	public Publicacion(String username, String fecha, String tag,String publicacion_titulo, String publicacion_descripcion){
 		this.username = username;
 		this.publicacion_fecha = fecha;
 		this.publicacion_titulo = publicacion_titulo;
 		this.publicacion_descripcion = publicacion_descripcion;
+		this.publicacion_tag = tag;
 	}
 	public String getPublicacion_titulo() {
 		return publicacion_titulo;
@@ -32,11 +33,11 @@ public class Publicacion {
 	public void setPublicacion_fecha(String publicacion_fecha) {
 		this.publicacion_fecha = publicacion_fecha;
 	}
-	public String getPublicacion_tipo() {
-		return publicacion_tipo;
+	public String getPublicacion_tag() {
+		return publicacion_tag;
 	}
 	public void setPublicacion_tipo(String publicacion_tipo) {
-		this.publicacion_tipo = publicacion_tipo;
+		this.publicacion_tag = publicacion_tipo;
 	}
 	public String getUsername() {
 		return username;

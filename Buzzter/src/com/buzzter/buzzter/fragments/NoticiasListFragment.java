@@ -30,7 +30,7 @@ public class NoticiasListFragment extends ListFragment {
 		ListView list = getListView();
 		ArrayList<Publicacion> publicaciones = new ArrayList<Publicacion>();
 		for(String room : getResources().getStringArray(R.array.array_publicaciones)){
-			Publicacion publicacion = new Publicacion("JEscalante","Hace x min", room, "Introduccion a la publicacion" ); 
+			Publicacion publicacion = new Publicacion("JEscalante","Hace x min","Musica", room, "Introduccion a la publicacion" ); 
 			publicaciones.add(publicacion);
 		}
 		
@@ -41,9 +41,9 @@ public class NoticiasListFragment extends ListFragment {
 	@Override
 	public void onListItemClick(ListView l, View v, int position, long id) {
 		Publicacion publicacion = (Publicacion) l.getItemAtPosition(position);
-		Intent intent = new Intent(getActivity(), MainActivity.class);
+		Intent intent = new Intent(getActivity(), PublicacionActivity.class);
 		intent.putExtra(PublicacionActivity.USERNAME, publicacion.getUsername());
-		intent.putExtra(PublicacionActivity.TIPO, publicacion.getPublicacion_tipo());
+		intent.putExtra(PublicacionActivity.TIPO, publicacion.getPublicacion_tag());
 		intent.putExtra(PublicacionActivity.TIEMPO, publicacion.getPublicacion_fecha());
 		intent.putExtra(PublicacionActivity.TITULO, publicacion.getPublicacion_titulo());
 		intent.putExtra(PublicacionActivity.DESCRIPCION, publicacion.getPublicacion_descripcion());

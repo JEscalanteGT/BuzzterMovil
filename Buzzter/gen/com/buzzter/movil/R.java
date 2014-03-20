@@ -984,11 +984,14 @@ containing a value of this type.
         public static final int abc_textfield_searchview_right_holo_dark=0x7f020055;
         public static final int abc_textfield_searchview_right_holo_light=0x7f020056;
         public static final int ic_action_chat=0x7f020057;
-        public static final int ic_action_important=0x7f020058;
-        public static final int ic_action_overflow=0x7f020059;
-        public static final int ic_launcher=0x7f02005a;
-        public static final int paisaje=0x7f02005b;
-        public static final int shape=0x7f02005c;
+        public static final int ic_action_email=0x7f020058;
+        public static final int ic_action_important=0x7f020059;
+        public static final int ic_action_new_event=0x7f02005a;
+        public static final int ic_action_overflow=0x7f02005b;
+        public static final int ic_action_search=0x7f02005c;
+        public static final int ic_launcher=0x7f02005d;
+        public static final int paisaje=0x7f02005e;
+        public static final int shape=0x7f02005f;
     }
     public static final class id {
         public static final int action_bar=0x7f05001c;
@@ -1002,7 +1005,7 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f050016;
         public static final int action_menu_presenter=0x7f050017;
         public static final int action_mode_close_button=0x7f050024;
-        public static final int action_settings=0x7f05005b;
+        public static final int action_settings=0x7f05005e;
         public static final int activity_chooser_view_content=0x7f050025;
         public static final int always=0x7f05000b;
         public static final int beginning=0x7f050011;
@@ -1030,6 +1033,9 @@ containing a value of this type.
         public static final int img_star=0x7f050058;
         public static final int listMode=0x7f050001;
         public static final int list_item=0x7f050029;
+        public static final int menu_mensaje=0x7f05005c;
+        public static final int menu_publicacion=0x7f05005b;
+        public static final int menu_search=0x7f05005d;
         public static final int middle=0x7f050012;
         public static final int never=0x7f050009;
         public static final int none=0x7f050010;
@@ -1186,20 +1192,25 @@ containing a value of this type.
         /**  Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f0a000b;
-        public static final int action_settings=0x7f0a000f;
+        public static final int action_settings=0x7f0a0014;
         public static final int app_name=0x7f0a000d;
-        public static final int hello_world=0x7f0a0010;
-        public static final int prueba_comentario=0x7f0a0019;
-        public static final int prueba_comentarios=0x7f0a0016;
-        public static final int prueba_descripcion=0x7f0a0015;
-        public static final int prueba_likes=0x7f0a0017;
-        public static final int prueba_tiempo=0x7f0a0013;
-        public static final int prueba_tipo=0x7f0a0012;
-        public static final int prueba_titulo=0x7f0a0014;
-        public static final int prueba_usuario=0x7f0a0011;
-        public static final int prueba_ver_mas=0x7f0a0018;
+        public static final int hello_world=0x7f0a0015;
+        public static final int menu_mensaje=0x7f0a0011;
+        public static final int menu_publicacion=0x7f0a0010;
+        public static final int menu_search=0x7f0a000f;
+        public static final int prueba_comentario=0x7f0a001e;
+        public static final int prueba_comentarios=0x7f0a001b;
+        public static final int prueba_descripcion=0x7f0a001a;
+        public static final int prueba_likes=0x7f0a001c;
+        public static final int prueba_tiempo=0x7f0a0018;
+        public static final int prueba_tipo=0x7f0a0017;
+        public static final int prueba_titulo=0x7f0a0019;
+        public static final int prueba_usuario=0x7f0a0016;
+        public static final int prueba_ver_mas=0x7f0a001d;
+        public static final int tab_noticias=0x7f0a0012;
+        public static final int tab_perfil=0x7f0a0013;
         public static final int title_activity_main=0x7f0a000e;
-        public static final int title_activity_prueba=0x7f0a001a;
+        public static final int title_activity_prueba=0x7f0a001f;
     }
     public static final class style {
         /** 

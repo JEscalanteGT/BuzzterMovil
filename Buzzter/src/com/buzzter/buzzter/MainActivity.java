@@ -1,12 +1,16 @@
 package com.buzzter.buzzter;
 
+import android.app.SearchManager;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBar.Tab;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.SearchView;
 import android.view.Menu;
+import android.view.MenuInflater;
 
 import com.buzzter.buzzter.adapters.ViewPagerAdapter;
 import com.buzzter.movil.R;
@@ -27,14 +31,16 @@ public class MainActivity extends ActionBarActivity implements ViewPager.OnPageC
 		ActionBar bar = getSupportActionBar();
 		bar.removeAllTabs();
 		bar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-		bar.addTab(bar.newTab().setText("Lista").setTabListener(this));
-		bar.addTab(bar.newTab().setText("Perfil").setTabListener(this));
+		bar.addTab(bar.newTab().setText(R.string.tab_noticias).setTabListener(this));
+		bar.addTab(bar.newTab().setText(R.string.tab_perfil).setTabListener(this));
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.main, menu);
+	    
 		return true;
 	}
 

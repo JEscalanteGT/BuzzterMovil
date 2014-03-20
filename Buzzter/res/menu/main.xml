@@ -1,5 +1,22 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:buzzter="http://schemas.android.com/apk/res-auto" >
 
+     <item android:id="@+id/menu_publicacion"
+          android:icon="@drawable/ic_action_new_event"
+          android:title="@string/menu_publicacion"
+          buzzter:showAsAction="always" />
+     
+    <item android:id="@+id/menu_mensaje"
+          android:icon="@drawable/ic_action_email"
+          android:title="@string/menu_mensaje"
+          buzzter:showAsAction="always" />
+    
+    <item android:id="@+id/menu_search"
+          android:icon="@drawable/ic_action_search"
+          android:title="@string/menu_search"
+          buzzter:showAsAction="always|collapseActionView"
+          buzzter:actionViewClass="android.support.v7.widget.SearchView"/>
+    
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"

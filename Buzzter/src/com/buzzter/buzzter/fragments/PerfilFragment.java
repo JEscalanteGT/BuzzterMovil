@@ -27,7 +27,7 @@ public class PerfilFragment extends ListFragment {
 		super.onCreate(savedInstanceState);
 		ArrayList<Publicacion> publicaciones = new ArrayList<Publicacion>();
 		for(String room : getResources().getStringArray(R.array.array_publicaciones)){
-			Publicacion publicacion = new Publicacion("JEscalante","Hace x min", room, "Introduccion a la publicacion" ); 
+			Publicacion publicacion = new Publicacion("JEscalante","Hace x min","Pelicula", room, "Introduccion a la publicacion" ); 
 			publicaciones.add(publicacion);
 		}
 		
@@ -40,10 +40,10 @@ public class PerfilFragment extends ListFragment {
 		Publicacion publicacion = (Publicacion) l.getItemAtPosition(position);
 		Intent intent = new Intent(getActivity(), PublicacionActivity.class);
 		intent.putExtra(PublicacionActivity.USERNAME, publicacion.getUsername());
-		intent.putExtra(PublicacionActivity.TIPO, publicacion.getPublicacion_tipo());
+		intent.putExtra(PublicacionActivity.TIPO, publicacion.getPublicacion_tag());
 		intent.putExtra(PublicacionActivity.TIEMPO, publicacion.getPublicacion_fecha());
 		intent.putExtra(PublicacionActivity.TITULO, publicacion.getPublicacion_titulo());
-		intent.putExtra(PublicacionActivity.DESCRIPCION, publicacion.getPublicacion_titulo());
+		intent.putExtra(PublicacionActivity.DESCRIPCION, publicacion.getPublicacion_descripcion());
 		
 		startActivity(intent);
 	}
