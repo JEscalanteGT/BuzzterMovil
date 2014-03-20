@@ -10,10 +10,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import com.buzzter.buzzter.MainActivity;
 import com.buzzter.buzzter.PublicacionActivity;
 import com.buzzter.buzzter.adapters.PublicacionesAdapter;
 import com.buzzter.buzzter.models.Publicacion;
+import com.buzzter.buzzter.models.Usuario;
 import com.buzzter.movil.R;
 
 public class NoticiasListFragment extends ListFragment {
@@ -27,10 +27,11 @@ public class NoticiasListFragment extends ListFragment {
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
 		
-		ListView list = getListView();
 		ArrayList<Publicacion> publicaciones = new ArrayList<Publicacion>();
-		for(String room : getResources().getStringArray(R.array.array_publicaciones)){
-			Publicacion publicacion = new Publicacion("JEscalante","Hace x min","Musica", room, "Introduccion a la publicacion" ); 
+		Usuario user = new Usuario(1, "JEscalante","jescalantegt@correo.com", "Jorge Escalante", "");
+		int i = 0;
+		for(String titulo : getResources().getStringArray(R.array.array_publicaciones)){
+			Publicacion publicacion = new Publicacion(i++, user, "28/02/2014", "Pelicula", titulo, "Pequeña Descripcion", "", "http://www.facebook.com", 3.5); 
 			publicaciones.add(publicacion);
 		}
 		
@@ -42,7 +43,7 @@ public class NoticiasListFragment extends ListFragment {
 	public void onListItemClick(ListView l, View v, int position, long id) {
 		Publicacion publicacion = (Publicacion) l.getItemAtPosition(position);
 		Intent intent = new Intent(getActivity(), PublicacionActivity.class);
-		intent.putExtra(PublicacionActivity.USERNAME, publicacion.getUsername());
+		intent.putExtra(PublicacionActivity.USERNAME, publicacion.getUsuario().getUsuario_username());
 		intent.putExtra(PublicacionActivity.TIPO, publicacion.getPublicacion_tag());
 		intent.putExtra(PublicacionActivity.TIEMPO, publicacion.getPublicacion_fecha());
 		intent.putExtra(PublicacionActivity.TITULO, publicacion.getPublicacion_titulo());

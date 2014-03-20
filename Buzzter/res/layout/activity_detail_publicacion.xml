@@ -2,14 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:padding="5dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
         android:orientation="horizontal"
-        android:padding="5dp" >
+        android:padding="5dp"
+        android:background="#FFF" >
 
         <ImageView
             android:id="@+id/img_publicacion_detail_avatar"
@@ -58,15 +60,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
         android:layout_weight="0"
         android:orientation="vertical"
-        android:padding="5dp" >
+        android:padding="5dp"
+        android:background="#FFF" >
 
         <TextView
             android:id="@+id/txt_publicacion_detail_titulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:text="@string/prueba_titulo"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -85,36 +88,45 @@
             android:src="@drawable/ic_launcher" />
     </LinearLayout>
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="#CCC"
-        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:background="#DDD"
+        android:orientation="vertical"
         android:padding="5dp">
-
-        <RatingBar
+		    <TextView
+            android:id="@+id/txt_publicacion_detail_estrellas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/publicacion_detail_estrellas"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+		    <RatingBar
             android:id="@+id/ratingBar1"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true" />
-        <TextView
+            android:layout_height="wrap_content"/>
+		    
+		    <TextView
+	          android:id="@+id/txt_publicacion_detail_texto_votos"
+	          android:layout_width="wrap_content"
+	          android:layout_height="wrap_content"
+	          android:gravity="center"
+	          android:text="@string/publicacion_detail_votos"
+	          android:textAppearance="?android:attr/textAppearanceSmall" />
+		    <TextView
             android:id="@+id/txt_publicacion_detail_votos"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center" 
             android:text="3,5 votos"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
             android:textAppearance="?android:attr/textAppearanceMedium" />
-		 
-    </RelativeLayout>
+    </LinearLayout>
 	
     <ListView
-        android:id="@android:id/list"
+        android:id="@+id/list_publicacion_detail_comentarios"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0" >
+        android:layout_weight="0">
     </ListView>
 
 </LinearLayout>

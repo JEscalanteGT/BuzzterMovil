@@ -37,6 +37,8 @@ public class PublicacionesAdapter extends ArrayAdapter<Publicacion> {
 			holder.tiempo = (TextView) convertView.findViewById(R.id.txt_publicacion_tiempo);
 			holder.titulo = (TextView) convertView.findViewById(R.id.txt_publicacion_titulo);
 			holder.descripcion = (TextView) convertView.findViewById(R.id.txt_publicacion_descripcion);
+			holder.votos = (TextView) convertView.findViewById(R.id.txt_publicacion_votos);
+			holder.comentarios = (TextView) convertView.findViewById(R.id.txt_publicacion_numero_comentarios);
 			
 			convertView.setTag(holder);
 		}else{
@@ -44,12 +46,13 @@ public class PublicacionesAdapter extends ArrayAdapter<Publicacion> {
 		}
 		
 		holder.img.setImageResource(R.drawable.ic_launcher);
-		holder.username.setText(publicacion_actual.getUsername());
-		holder.tipo.setText(publicacion_actual.PUBLICACION_MUSICA);
+		holder.username.setText(publicacion_actual.getUsuario().getUsuario_username());
+		holder.tipo.setText(publicacion_actual.getPublicacion_tag());
 		holder.tiempo.setText(publicacion_actual.getPublicacion_fecha());
 		holder.titulo.setText(publicacion_actual.getPublicacion_titulo());
 		holder.descripcion.setText(publicacion_actual.getPublicacion_descripcion());
-		
+		holder.comentarios.setText(Integer.toString(publicacion_actual.getPublicacion_comentarios().size()));
+		holder.votos.setText(publicacion_actual.getPublicacion_rating().toString());
 		return convertView;
 	}
 
@@ -60,6 +63,8 @@ public class PublicacionesAdapter extends ArrayAdapter<Publicacion> {
 		public TextView tiempo;
 		public TextView titulo;
 		public TextView descripcion;
+		public TextView votos;
+		public TextView comentarios;
 	}
 
 }

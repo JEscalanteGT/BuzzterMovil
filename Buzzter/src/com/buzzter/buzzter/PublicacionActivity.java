@@ -1,11 +1,17 @@
 package com.buzzter.buzzter;
 
+import java.util.ArrayList;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
+import android.widget.ListView;
 import android.widget.TextView;
 
+import com.buzzter.buzzter.adapters.ComentariosAdapter;
+import com.buzzter.buzzter.models.Comentario;
+import com.buzzter.buzzter.models.Usuario;
 import com.buzzter.movil.R;
 
 public class PublicacionActivity extends ActionBarActivity {
@@ -33,6 +39,15 @@ public class PublicacionActivity extends ActionBarActivity {
 		txtTiempo.setText(intent.getStringExtra(TIEMPO));
 		txtTitulo.setText(intent.getStringExtra(TITULO));
 		txtDescripcion.setText(intent.getStringExtra(DESCRIPCION));
+		
+		Usuario user = new Usuario(1, "JEscalante","jescalantegt@correo.com", "Jorge Escalante", "");
+		
+		ListView list = (ListView) this.findViewById(R.id.list_publicacion_detail_comentarios);
+		ArrayList<Comentario> comentarios = new ArrayList<Comentario>();
+		for(int i=0; i<10; i++)
+			comentarios.add(new Comentario(i,"12/03/2014", "Comentario pequeño", user));
+		ComentariosAdapter adapter = new ComentariosAdapter(this, comentarios);
+		list.setAdapter(adapter);
 	}
 
 	@Override
