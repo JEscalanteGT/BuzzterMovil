@@ -31,7 +31,7 @@ public class NoticiasListFragment extends ListFragment {
 		Usuario user = new Usuario(1, "JEscalante","jescalantegt@correo.com", "Jorge Escalante", "");
 		int i = 0;
 		for(String titulo : getResources().getStringArray(R.array.array_publicaciones)){
-			Publicacion publicacion = new Publicacion(i++, user, "28/02/2014", "Pelicula", titulo, "PequeÃ±a Descripcion", "", "http://www.facebook.com", 3.5); 
+			Publicacion publicacion = new Publicacion(i++, user, "28/02/2014", "Pelicula", titulo, "Pequeña Descripcion", "", "http://www.facebook.com", 3.5); 
 			publicaciones.add(publicacion);
 		}
 		

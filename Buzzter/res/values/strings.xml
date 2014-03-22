@@ -33,4 +33,35 @@
         <item>Pixar ya está trabajando en The Incredibles 2 y Cars 3</item>
         <item>Metal Gear Solid V: Ground Zeroes se puede completar en apenas 10 minutos</item>
     </string-array>
+    
+    <string name="imagen_login">buzzter</string>
+	<string name="login_buzzter">buzzter</string>
+	<string name="login_email">Correo electronico</string>
+	<string name="login_password">Contraseña</string>
+	<string name="login_login">Iniciar sesion</string>
+	<string name="login_registrate">Registrate en Buzzter</string>
+	
+	<string name="registro_registro">Registro</string>
+	<string name="registro_descripcion">Una breve descripcion del servicio
+	    								como funciona? Datos necesarios? etc</string>
+	<string name="registro_user">Nombre de usuario</string>
+	<string name="registro_email">Correo electronico</string>
+	<string name="registro_password">Contraseña</string>
+	<string name="registro_confirm_password">Repita la contraseña</string>
+	<string name="registro_registrar">Registrarse en Buzzter</string>
+	<string name="imagen_registro">foto</string>
+	
+	<string name="crear_publicacion_titulo">Titulo de la publicacion</string>
+	<string name="crear_publicacion_descripcion">Descripcion</string>
+	<string name="crear_publicacion_tipo">Tipo de publicacion</string>
+	<string name="crear_publicacion_publicar">Publicar</string>
+	<string name="crear_publicacion_error">....</string>
+	
+	<string-array name="array_TipoPublicacion">
+        <item>Musica</item>
+        <item>Pelicula</item>
+        <item>Libro</item>
+        <item>Otros</item>
+    </string-array>
+	
 </resources>

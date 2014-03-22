@@ -1,16 +1,15 @@
 package com.buzzter.buzzter;
 
-import android.app.SearchManager;
-import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBar.Tab;
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 
 import com.buzzter.buzzter.adapters.ViewPagerAdapter;
 import com.buzzter.movil.R;
@@ -40,10 +39,26 @@ public class MainActivity extends ActionBarActivity implements ViewPager.OnPageC
 		// Inflate the menu; this adds items to the action bar if it is present.
 		MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.main, menu);
+		
+		
 	    
 		return true;
 	}
-
+	public void OpenPublicacion(){
+		Intent intent = new Intent(this, CrearPublicacionActivity.class);
+		startActivity(intent);
+	}
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+	        case R.id.menu_publicacion:
+	        	OpenPublicacion();
+	 		   return true;
+	        
+	        default:
+	            return super.onOptionsItemSelected(item);
+		}
+	}
 	@Override
 	public void onTabReselected(Tab arg0, FragmentTransaction arg1) {
 		// TODO Auto-generated method stub

@@ -45,7 +45,7 @@ public class PublicacionActivity extends ActionBarActivity {
 		ListView list = (ListView) this.findViewById(R.id.list_publicacion_detail_comentarios);
 		ArrayList<Comentario> comentarios = new ArrayList<Comentario>();
 		for(int i=0; i<10; i++)
-			comentarios.add(new Comentario(i,"12/03/2014", "Comentario pequeÃ±o", user));
+			comentarios.add(new Comentario(i,"12/03/2014", "Comentario pequeño", user));
 		ComentariosAdapter adapter = new ComentariosAdapter(this, comentarios);
 		list.setAdapter(adapter);
 	}
