@@ -29,7 +29,7 @@ public class PerfilFragment extends ListFragment {
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		ArrayList<Publicacion> publicaciones = new ArrayList<Publicacion>();
-		Usuario user = new Usuario(1, "JEscalante","jescalantegt@correo.com", "Jorge Escalante", "");
+		Usuario user = new Usuario("JEscalante","jescalantegt@correo.com", "Jorge Escalante", "", false);
 		ViewHolder holder = new ViewHolder();
 		holder.username = (TextView) getView().findViewById(R.id.txt_perfil_username);
 		holder.nombre = (TextView) getView().findViewById(R.id.txt_perfil_name);

@@ -40,12 +40,12 @@ public class PublicacionActivity extends ActionBarActivity {
 		txtTitulo.setText(intent.getStringExtra(TITULO));
 		txtDescripcion.setText(intent.getStringExtra(DESCRIPCION));
 		
-		Usuario user = new Usuario(1, "JEscalante","jescalantegt@correo.com", "Jorge Escalante", "");
+		Usuario user = new Usuario("JEscalante","jescalantegt@correo.com", "Jorge Escalante", "", false);
 		
 		ListView list = (ListView) this.findViewById(R.id.list_publicacion_detail_comentarios);
 		ArrayList<Comentario> comentarios = new ArrayList<Comentario>();
 		for(int i=0; i<10; i++)
-			comentarios.add(new Comentario(i,"12/03/2014", "Comentario pequeño", user));
+			comentarios.add(new Comentario(i,"12/03/2014", "Comentario pequeï¿½o", user));
 		ComentariosAdapter adapter = new ComentariosAdapter(this, comentarios);
 		list.setAdapter(adapter);
 	}

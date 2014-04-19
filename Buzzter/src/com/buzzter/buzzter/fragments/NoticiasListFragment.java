@@ -28,10 +28,10 @@ public class NoticiasListFragment extends ListFragment {
 		super.onActivityCreated(savedInstanceState);
 		
 		ArrayList<Publicacion> publicaciones = new ArrayList<Publicacion>();
-		Usuario user = new Usuario(1, "JEscalante","jescalantegt@correo.com", "Jorge Escalante", "");
+		Usuario user = new Usuario("JEscalante","jescalantegt@correo.com", "Jorge Escalante", "", false);
 		int i = 0;
 		for(String titulo : getResources().getStringArray(R.array.array_publicaciones)){
-			Publicacion publicacion = new Publicacion(i++, user, "28/02/2014", "Pelicula", titulo, "Pequeña Descripcion", "", "http://www.facebook.com", 3.5); 
+			Publicacion publicacion = new Publicacion(i++, user, "28/02/2014", "Pelicula", titulo, "Pequeï¿½a Descripcion", "", "http://www.facebook.com", 3.5); 
 			publicaciones.add(publicacion);
 		}
 		

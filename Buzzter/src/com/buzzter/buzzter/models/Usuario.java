@@ -3,21 +3,26 @@ package com.buzzter.buzzter.models;
 import java.util.ArrayList;
 
 public class Usuario {
-	private int id;
 	private String usuario_username;
 	private String usuario_email;
 	private String usuario_nombre;
 	private String usuario_pais;
 	private String usuario_imgUrl;
+	private boolean usuario_isStaff;
 	private ArrayList<Usuario> usuario_followers;
 	private ArrayList<Usuario> usuario_following;
 	private ArrayList<Publicacion> usuario_publicaciones;
-	public Usuario(int id, String username, String email, String nombre, String imgUrl){
-		this.id = id;
+	public Usuario(){
+		this.usuario_followers = new ArrayList<Usuario>();
+		this.usuario_following = new ArrayList<Usuario>();
+		this.usuario_publicaciones = new ArrayList<Publicacion>();
+	}
+	public Usuario(String username, String email, String nombre, String imgUrl, boolean isStaff){
 		this.usuario_username = username;
 		this.usuario_email = email;
 		this.usuario_nombre = nombre;
 		this.usuario_imgUrl = imgUrl;
+		this.usuario_isStaff = isStaff;
 		this.usuario_followers = new ArrayList<Usuario>();
 		this.usuario_following = new ArrayList<Usuario>();
 		this.usuario_publicaciones = new ArrayList<Publicacion>();
@@ -78,5 +83,11 @@ public class Usuario {
 	}
 	public void add_publicacion(Publicacion publicacion){
 		this.usuario_publicaciones.add(publicacion);
+	}
+	public boolean isUsuario_isStaff() {
+		return usuario_isStaff;
+	}
+	public void setUsuario_isStaff(boolean usuario_isStaff) {
+		this.usuario_isStaff = usuario_isStaff;
 	}
 }
