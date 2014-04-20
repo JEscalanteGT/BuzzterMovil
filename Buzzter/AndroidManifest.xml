@@ -30,17 +30,26 @@
         <activity
             android:name="com.buzzter.buzzter.PublicacionActivity"
             android:label="@string/app_name"
-            android:parentActivityName="com.buzzter.buzzter.MainActivity" >
+            android:parentActivityName="com.buzzter.buzzter.MainActivity">
+            <meta-data
+            	android:name="android.support.PARENT_ACTIVITY"
+            	android:value="com.buzzter.buzzter.MainActivity" />
         </activity>
         <activity
             android:name="com.buzzter.buzzter.CrearPublicacionActivity"
             android:label="@string/app_name"
             android:parentActivityName="com.buzzter.buzzter.MainActivity" >
+            <meta-data
+            	android:name="android.support.PARENT_ACTIVITY"
+            	android:value="com.buzzter.buzzter.MainActivity" />
         </activity>
         <activity
             android:name="com.buzzter.buzzter.RegistroActivity"
             android:label="@string/app_name"
             android:parentActivityName="com.buzzter.buzzter.MainActivity" >
+            <meta-data
+            	android:name="android.support.PARENT_ACTIVITY"
+            	android:value="com.buzzter.buzzter.MainActivity" />
         </activity>
     </application>
 

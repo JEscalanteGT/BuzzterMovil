@@ -12,15 +12,21 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import com.buzzter.buzzter.adapters.ViewPagerAdapter;
+import com.buzzter.buzzter.database.SessionManager;
+import com.buzzter.buzzter.utils.ConstantsUtils;
 import com.buzzter.movil.R;
 
 public class MainActivity extends ActionBarActivity implements ViewPager.OnPageChangeListener, ActionBar.TabListener{
 	private ViewPager view_pager;
 	private ViewPagerAdapter view_pager_adapter;
+	private SessionManager session;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		ConstantsUtils.showOverflowMenu(getApplicationContext());
+		session = new SessionManager(getApplicationContext());
 		
 		view_pager_adapter = new ViewPagerAdapter(getSupportFragmentManager());
 		view_pager = (ViewPager) findViewById(R.id.view_pager);
@@ -39,22 +45,30 @@ public class MainActivity extends ActionBarActivity implements ViewPager.OnPageC
 		// Inflate the menu; this adds items to the action bar if it is present.
 		MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.main, menu);
-		
-		
-	    
 		return true;
 	}
+	
 	public void OpenPublicacion(){
 		Intent intent = new Intent(this, CrearPublicacionActivity.class);
 		startActivity(intent);
+	}
+	
+	public void startLoginActivity(){
+		session.logoutUser();
+		Intent intent = new Intent(this, LoginActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
 	}
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 	        case R.id.menu_publicacion:
 	        	OpenPublicacion();
-	 		   return true;
-	        
+	 		   	return true;
+	        case R.id.menu_logout:
+	        	startLoginActivity();
+	 		   	return true;
 	        default:
 	            return super.onOptionsItemSelected(item);
 		}

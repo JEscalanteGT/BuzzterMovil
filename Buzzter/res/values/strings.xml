@@ -7,6 +7,7 @@
     <string name="menu_search">Buscar</string>
     <string name="menu_publicacion">Publicar</string>
     <string name="menu_mensaje">Mensaje</string>
+    <string name="menu_logout">Cerrar sesión</string>
     
     <string name="tab_noticias">NOTICIAS</string>
     <string name="tab_perfil">PERFIL</string>

@@ -20,10 +20,21 @@ public class SessionManager {
         pref = _context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
         editor = pref.edit();
     }
+	
 	public void createLoginSession(String username, String name, String imgURL){
         editor.putBoolean(KEY_ISLOGIN, true);
         editor.putString(KEY_NAME, name);
         editor.putString(KEY_IMGURL, imgURL);
         editor.commit();
-    }   
+    }
+	
+	public Boolean checkLogin(){
+		  return pref.getBoolean(KEY_ISLOGIN, false);
+    }
+	
+	public void logoutUser(){
+        editor.clear();
+        editor.commit();
+    }
+     
 }
