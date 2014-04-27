@@ -13,7 +13,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.buzzter.buzzter.adapters.ViewPagerAdapter;
 import com.buzzter.buzzter.adapters.ejemploAdapter;
 import com.buzzter.buzzter.database.SessionManager;
 import com.buzzter.buzzter.fragments.NoticiasListFragment;
@@ -23,26 +22,24 @@ import com.buzzter.buzzter.utils.ConstantsUtils;
 import com.buzzter.buzzter.views.SlidingTabLayout;
 import com.buzzter.movil.R;
 
-public class MainActivity extends ActionBarActivity{
+public class Prueba extends ActionBarActivity {
 	private ViewPager view_pager;
-	private ViewPagerAdapter view_pager_adapter;
 	private SessionManager session;
 	private SlidingTabLayout mSlidingTabLayout;
     private List<PagerItem> Tabs;
-	
+    
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.activity_prueba);
 		ConstantsUtils.showOverflowMenu(getApplicationContext());
 		session = new SessionManager(getApplicationContext());
-		Toast toast1 = Toast.makeText(getApplicationContext(), R.color.buzzter_color + "", Toast.LENGTH_LONG);
+		Toast toast1 = Toast.makeText(getApplicationContext(), session.getUser(), Toast.LENGTH_LONG);
         toast1.show();
-        
-        Tabs = new ArrayList<PagerItem>();
+		Tabs = new ArrayList<PagerItem>();
 		Tabs.add(new PagerItem(
                 getString(R.string.tab_noticias), // Title
-                new NoticiasListFragment()
+               new NoticiasListFragment()
 		));
 		Tabs.add(new PagerItem(
                 getString(R.string.tab_perfil), // Title
@@ -51,6 +48,10 @@ public class MainActivity extends ActionBarActivity{
 		view_pager = (ViewPager) findViewById(R.id.view_pager);
 		view_pager.setAdapter(new ejemploAdapter(getSupportFragmentManager(), Tabs));
 		
+		//view_pager_adapter = new ViewPagerAdapter(getSupportFragmentManager());
+		//view_pager = (ViewPager) findViewById(R.id.view_pager);
+		//view_pager.setAdapter(view_pager_adapter);
+		
 		mSlidingTabLayout = (SlidingTabLayout) findViewById(R.id.sliding_tabs);
 		mSlidingTabLayout.setViewPager(view_pager);
 		
@@ -58,15 +59,16 @@ public class MainActivity extends ActionBarActivity{
 			 
             @Override
             public int getIndicatorColor(int position) {
-            	return getResources().getColor(Tabs.get(position).getIndicatorColor());
+                return Tabs.get(position).getIndicatorColor();
             }
  
             @Override
             public int getDividerColor(int position) {
-                return getResources().getColor(Tabs.get(position).getIndicatorColor());
+                return Tabs.get(position).getDividerColor();
             }
  
         });
+		
 	}
 
 	@Override
@@ -102,5 +104,4 @@ public class MainActivity extends ActionBarActivity{
 	            return super.onOptionsItemSelected(item);
 		}
 	}
-
 }

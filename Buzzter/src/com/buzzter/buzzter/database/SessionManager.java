@@ -32,6 +32,10 @@ public class SessionManager {
 		  return pref.getBoolean(KEY_ISLOGIN, false);
     }
 	
+	public String getUser(){
+		  return pref.getString(KEY_NAME, "NAN");
+	}
+	
 	public void logoutUser(){
         editor.clear();
         editor.commit();

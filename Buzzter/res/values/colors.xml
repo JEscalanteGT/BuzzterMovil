@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ 
+    <color name="buzzter_color">#F1D327</color>
+    <color name="actionbar_background">#FFFFFF</color>
+    <color name="actionbar_text">#555</color>
+    <color name="first_text_color">#777</color>
+    <color name="stacked_green">#118504</color>
+    <color name="accent_green">#97e08f</color>
+ 
+</resources>

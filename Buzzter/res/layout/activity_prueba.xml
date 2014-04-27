@@ -2,8 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DDD"
-    android:orientation="vertical" >
+    android:background="#DDD" 
+    android:orientation="vertical">
     
 	<com.buzzter.buzzter.views.SlidingTabLayout
           android:id="@+id/sliding_tabs" 
