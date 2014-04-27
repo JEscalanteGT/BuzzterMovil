@@ -23,6 +23,7 @@ public class SessionManager {
 	
 	public void createLoginSession(String username, String name, String imgURL){
         editor.putBoolean(KEY_ISLOGIN, true);
+        editor.putString(KEY_USERNAME, username);
         editor.putString(KEY_NAME, name);
         editor.putString(KEY_IMGURL, imgURL);
         editor.commit();
@@ -33,7 +34,7 @@ public class SessionManager {
     }
 	
 	public String getUser(){
-		  return pref.getString(KEY_NAME, "NAN");
+		  return pref.getString(KEY_USERNAME, "NAN");
 	}
 	
 	public void logoutUser(){

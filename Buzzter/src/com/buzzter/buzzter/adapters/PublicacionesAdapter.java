@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.buzzter.buzzter.models.Publicacion;
+import com.buzzter.buzzter.utils.BitmapManager;
 import com.buzzter.movil.R;
 
 public class PublicacionesAdapter extends ArrayAdapter<Publicacion> {
@@ -42,14 +43,14 @@ public class PublicacionesAdapter extends ArrayAdapter<Publicacion> {
 			convertView.setTag(holder);
 		}else{
 			holder = (ViewHolder) convertView.getTag();
-		}
+		}	
 		
-		holder.img.setImageResource(R.drawable.ic_launcher);
+		BitmapManager.getInstance().loadBitmap(publicacion_actual.getPublicacion_img_link(), holder.img);
 		holder.username.setText(publicacion_actual.getUsuario().getUsuario_username());
 		holder.tipo.setText(publicacion_actual.getPublicacion_tag());
 		holder.tiempo.setText(publicacion_actual.getPublicacion_fecha());
 		holder.titulo.setText(publicacion_actual.getPublicacion_titulo());
-		holder.comentarios.setText(Integer.toString(publicacion_actual.getPublicacion_comentarios().size()));
+		holder.comentarios.setText(Integer.toString(publicacion_actual.getPublicacion_numero_comentarios()));
 		holder.votos.setText(publicacion_actual.getPublicacion_rating().toString());
 		return convertView;
 	}
@@ -60,7 +61,6 @@ public class PublicacionesAdapter extends ArrayAdapter<Publicacion> {
 		public TextView tipo;
 		public TextView tiempo;
 		public TextView titulo;
-		public TextView descripcion;
 		public TextView votos;
 		public TextView comentarios;
 	}

@@ -1,0 +1,29 @@
+{
+ "objects": [{
+ "id": 1,
+ "comments": 1,
+ "descripcion": "una canción relajante",
+ "fecha": "2013-11-15T00:14:47",
+ "link": "http://www.youtube.com/watch?v=fJ5LaPyzaj0",
+ "linkImagen": "http://canasto.es/assets/2012/03/android.png",
+ "rating": 0.0,
+ "resource_uri": "/v1/posts/2/",
+ "tags": "musica",
+ "titulo": "Una publicacion",
+ "user": "admin",
+ "user_uri": "/v1/user/admin/"
+ }, {
+ "id": 2;
+ "comments": 10,
+ "descripcion": "Muy buena cancion",
+ "fecha": "2013-11-15T04:31:43",
+ "link": "http://www.youtube.com/watch?v=fSnBF-BmccQ",
+ "linkImagen": "http://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Android_robot.svg/512px-Android_robot.svg.png",
+ "rating": 3.0,
+ "resource_uri": "/v1/posts/3/",
+ "tags": "musica",
+ "titulo": "Common",
+ "user": "admin",
+ "user_uri": "/v1/user/admin/"
+ }]
+}

@@ -7,12 +7,15 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.io.StringWriter;
 import java.io.Writer;
+import java.util.ArrayList;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.content.Context;
 
+import com.buzzter.buzzter.models.Publicacion;
 import com.buzzter.buzzter.models.Usuario;
 public class BuzzterUtils {
 
@@ -36,6 +39,39 @@ public class BuzzterUtils {
 		return usuario;
 	}
 	
+	public static ArrayList<Publicacion> getTimeline(String username, String jsonString){
+		ArrayList<Publicacion> publicaciones = new ArrayList<Publicacion>();
+		JSONObject jsonResponse;
+		try {
+			jsonResponse = new JSONObject(jsonString);
+			JSONArray jsonArray = jsonResponse.getJSONArray("objects");
+			JSONObject jsonObject;
+
+			for (int i = 0; i < jsonArray.length(); i++) {
+				jsonObject = (JSONObject) jsonArray.get(i);
+				Publicacion publicacion = new Publicacion();
+				publicacion.setId(jsonObject.getInt("id"));
+				publicacion.setPublicacion_titulo(jsonObject.getString("titulo"));
+				publicacion.setPublicacion_tipo(jsonObject.getString("tags"));
+				publicacion.setPublicacion_fecha(jsonObject.getString("fecha"));
+				Usuario usuario = new Usuario();
+				usuario.setUsuario_username(jsonObject.getString("user"));
+				publicacion.setUsuario(usuario);
+				publicacion.setPublicacion_numero_comentarios(jsonObject.getInt("comments"));
+				publicacion.setPublicacion_rating(jsonObject.getDouble("rating"));
+				publicacion.setPublicacion_img_link(jsonObject.getString("linkImagen"));
+				publicacion.setPublicacion_link(jsonObject.getString("link"));
+				
+				publicaciones.add(publicacion);
+			}
+			
+		} 
+		catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return publicaciones;
+	}
 	public static String readFile(Context context, String file) throws IOException{
 		InputStream is = context.getResources().getAssets().open(file);
 		char[] buffer = new char[2048];

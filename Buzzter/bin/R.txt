@@ -474,6 +474,8 @@ int string registro_registro 0x7f0a002a
 int string registro_user 0x7f0a002c
 int string tab_noticias 0x7f0a0013
 int string tab_perfil 0x7f0a0014
+int string timeline_cargando_posts 0x7f0a0037
+int string timeline_error_posts 0x7f0a0038
 int string title_activity_main 0x7f0a000e
 int string title_activity_prueba 0x7f0a0023
 int style AppBaseTheme 0x7f0b008b

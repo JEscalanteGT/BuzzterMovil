@@ -66,4 +66,6 @@
         <item>Otros</item>
     </string-array>
 	
+	<string name="timeline_cargando_posts">Espera un momento, tu timeline se esta cargando :)</string>
+	<string name="timeline_error_posts">Oops no se cargaron las publicaciones correctamente</string>
 </resources>

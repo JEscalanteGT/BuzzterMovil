@@ -1377,6 +1377,8 @@ containing a value of this type.
         public static final int registro_user=0x7f0a002c;
         public static final int tab_noticias=0x7f0a0013;
         public static final int tab_perfil=0x7f0a0014;
+        public static final int timeline_cargando_posts=0x7f0a0037;
+        public static final int timeline_error_posts=0x7f0a0038;
         public static final int title_activity_main=0x7f0a000e;
         public static final int title_activity_prueba=0x7f0a0023;
     }

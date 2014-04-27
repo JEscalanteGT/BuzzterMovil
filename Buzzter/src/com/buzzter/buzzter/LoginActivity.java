@@ -9,7 +9,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.text.util.Linkify;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckedTextView;
@@ -34,11 +33,9 @@ public class LoginActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         session = new SessionManager(getApplicationContext());
         if(session.checkLogin()){
-        	Log.d("LOGIN ", "Pasa por acá");
         	startMainActivity();
         }
         else{
-        	Log.d("CREAR", "Pasa por acá");
         	setContentView(R.layout.activity_login);
             
             Usuario = (EditText) findViewById(R.id.Usuario);

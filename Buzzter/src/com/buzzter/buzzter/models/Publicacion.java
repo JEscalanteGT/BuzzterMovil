@@ -12,7 +12,11 @@ public class Publicacion {
 	private String publicacion_img_link;
 	private String publicacion_link;
 	private Double publicacion_rating;
+	private int publicacion_numero_comentarios;
 	private ArrayList<Comentario> publicacion_comentarios;
+	public Publicacion(){
+		this.publicacion_comentarios = new ArrayList<Comentario>();
+	}
 	public Publicacion(int id, Usuario usuario, String fecha, String tag,String titulo, String descripcion, String img_link, String link, Double rating){
 		this.id = id;
 		this.usuario = usuario;
@@ -84,5 +88,12 @@ public class Publicacion {
 	}
 	public void setId(int id) {
 		this.id = id;
+	}
+	public int getPublicacion_numero_comentarios() {
+		return publicacion_numero_comentarios;
+	}
+	public void setPublicacion_numero_comentarios(
+			int publicacion_numero_comentarios) {
+		this.publicacion_numero_comentarios = publicacion_numero_comentarios;
 	}
 }
