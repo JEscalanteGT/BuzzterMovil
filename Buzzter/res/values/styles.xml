@@ -19,8 +19,7 @@
     
 	<style name="BuzzterTheme"
            parent="@style/Theme.AppCompat.Light">
-        <item name="@android:actionBarStyle">@style/BuzzterTheme.ActionBarStyle</item>
-        <item name="android:textColor">@color/first_text_color</item>
+        <item name="@android:actionBarStyle">@style/BuzzterTheme.ActionBarStyle</item>     		<item name="android:textColor">@color/first_text_color</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="actionBarStyle">@style/BuzzterTheme.ActionBarStyle</item>
     </style>
@@ -38,5 +37,19 @@
     	<item name="android:textColor">@color/actionbar_text</item>
   	</style>
   	
+  	<style name="ButtonStyle">
+    	<item name="android:background">@drawable/button_selector</item>
+    	<item name="android:textColor">@color/activity_button_text</item>
+    </style>
+    
+  	
+  	<style name="LoginStyle">
+    	<item name="android:textColor">@color/first_text_color</item>
+    	<item name="android:background">@color/activity_login_background</item>
+  	</style>
+  	<style name="LinearStyle">
+    	
+    	<item name="android:background">@color/activity_background</item>
+  	</style>
   	
 </resources>

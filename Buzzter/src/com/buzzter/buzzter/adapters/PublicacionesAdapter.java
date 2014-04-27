@@ -31,12 +31,11 @@ public class PublicacionesAdapter extends ArrayAdapter<Publicacion> {
 			convertView = inflater.inflate(R.layout.fragment_publicacion, null);
 			
 			holder = new ViewHolder();
-			holder.img = (ImageView) convertView.findViewById(R.id.img_publicacion_avatar);
+			holder.img = (ImageView) convertView.findViewById(R.id.img_publicacion_imagen);
 			holder.username = (TextView) convertView.findViewById(R.id.txt_publicacion_username);
 			holder.tipo = (TextView) convertView.findViewById(R.id.txt_publicacion_tipo);
 			holder.tiempo = (TextView) convertView.findViewById(R.id.txt_publicacion_tiempo);
 			holder.titulo = (TextView) convertView.findViewById(R.id.txt_publicacion_titulo);
-			holder.descripcion = (TextView) convertView.findViewById(R.id.txt_publicacion_descripcion);
 			holder.votos = (TextView) convertView.findViewById(R.id.txt_publicacion_votos);
 			holder.comentarios = (TextView) convertView.findViewById(R.id.txt_publicacion_numero_comentarios);
 			
@@ -50,7 +49,6 @@ public class PublicacionesAdapter extends ArrayAdapter<Publicacion> {
 		holder.tipo.setText(publicacion_actual.getPublicacion_tag());
 		holder.tiempo.setText(publicacion_actual.getPublicacion_fecha());
 		holder.titulo.setText(publicacion_actual.getPublicacion_titulo());
-		holder.descripcion.setText(publicacion_actual.getPublicacion_descripcion());
 		holder.comentarios.setText(Integer.toString(publicacion_actual.getPublicacion_comentarios().size()));
 		holder.votos.setText(publicacion_actual.getPublicacion_rating().toString());
 		return convertView;

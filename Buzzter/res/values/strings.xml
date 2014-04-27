@@ -12,6 +12,7 @@
     <string name="tab_noticias">NOTICIAS</string>
     <string name="tab_perfil">PERFIL</string>
     
+    <string name="publicacion_escrito">Por </string>
     <string name="publicacion_detail_estrellas">Vota esta publicación:</string>
     <string name="publicacion_detail_votos">Promedio de votos:</string>
     

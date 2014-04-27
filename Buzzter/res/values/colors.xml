@@ -3,9 +3,13 @@
  
     <color name="buzzter_color">#F1D327</color>
     <color name="actionbar_background">#FFFFFF</color>
-    <color name="actionbar_text">#555</color>
+    <color name="actionbar_text">#828282</color>
     <color name="first_text_color">#777</color>
-    <color name="stacked_green">#118504</color>
-    <color name="accent_green">#97e08f</color>
- 
+    
+    <color name="activity_login_background">#FFFFFF</color>
+    <color name="activity_background">#E5E5E5</color>
+    
+    <color name="activity_button">#0064AD</color>
+ 	<color name="activity_button_border">#0051b3</color>
+ 	<color name="activity_button_text">#FFFFFF</color>
 </resources>

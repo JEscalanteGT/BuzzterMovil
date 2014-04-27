@@ -862,16 +862,19 @@ containing a value of this type.
         public static final int abc_split_action_bar_is_narrow=0x7f060002;
     }
     public static final class color {
-        public static final int abc_search_url_text_holo=0x7f070009;
+        public static final int abc_search_url_text_holo=0x7f07000c;
         public static final int abc_search_url_text_normal=0x7f070000;
         public static final int abc_search_url_text_pressed=0x7f070002;
         public static final int abc_search_url_text_selected=0x7f070001;
-        public static final int accent_green=0x7f070008;
         public static final int actionbar_background=0x7f070004;
         public static final int actionbar_text=0x7f070005;
+        public static final int activity_background=0x7f070008;
+        public static final int activity_button=0x7f070009;
+        public static final int activity_button_border=0x7f07000a;
+        public static final int activity_button_text=0x7f07000b;
+        public static final int activity_login_background=0x7f070007;
         public static final int buzzter_color=0x7f070003;
         public static final int first_text_color=0x7f070006;
-        public static final int stacked_green=0x7f070007;
     }
     public static final class dimen {
         /**  Default height of an action bar. 
@@ -1087,15 +1090,18 @@ containing a value of this type.
         public static final int abc_textfield_searchview_right_holo_dark=0x7f020055;
         public static final int abc_textfield_searchview_right_holo_light=0x7f020056;
         public static final int actionbar_background=0x7f020057;
-        public static final int ic_action_chat=0x7f020058;
-        public static final int ic_action_email=0x7f020059;
-        public static final int ic_action_important=0x7f02005a;
-        public static final int ic_action_new_event=0x7f02005b;
-        public static final int ic_action_overflow=0x7f02005c;
-        public static final int ic_action_search=0x7f02005d;
-        public static final int ic_launcher=0x7f02005e;
-        public static final int paisaje=0x7f02005f;
-        public static final int shape=0x7f020060;
+        public static final int button_selector=0x7f020058;
+        public static final int button_shape_pressed=0x7f020059;
+        public static final int button_shape_released=0x7f02005a;
+        public static final int ic_action_chat=0x7f02005b;
+        public static final int ic_action_email=0x7f02005c;
+        public static final int ic_action_important=0x7f02005d;
+        public static final int ic_action_new_event=0x7f02005e;
+        public static final int ic_action_overflow=0x7f02005f;
+        public static final int ic_action_search=0x7f020060;
+        public static final int ic_launcher=0x7f020061;
+        public static final int paisaje=0x7f020062;
+        public static final int shape=0x7f020063;
     }
     public static final class id {
         public static final int Buzzter=0x7f050052;
@@ -1125,7 +1131,7 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f050016;
         public static final int action_menu_presenter=0x7f050017;
         public static final int action_mode_close_button=0x7f050024;
-        public static final int action_settings=0x7f05007d;
+        public static final int action_settings=0x7f05007c;
         public static final int activity_chooser_view_content=0x7f050025;
         public static final int always=0x7f05000b;
         public static final int beginning=0x7f050011;
@@ -1147,19 +1153,18 @@ containing a value of this type.
         public static final int imageView1=0x7f050065;
         public static final int img_comentario_usuario=0x7f050061;
         public static final int img_comments=0x7f050076;
-        public static final int img_publicacion_avatar=0x7f05006e;
-        public static final int img_publicacion_comments=0x7f050078;
         public static final int img_publicacion_detail_avatar=0x7f050045;
         public static final int img_publicacion_detail_imagen=0x7f05004b;
+        public static final int img_publicacion_imagen=0x7f05006e;
         public static final int img_star=0x7f050074;
         public static final int listMode=0x7f050001;
         public static final int list_item=0x7f050029;
         public static final int list_publicacion_detail_comentarios=0x7f050050;
         public static final int logo=0x7f050051;
-        public static final int menu_logout=0x7f05007c;
-        public static final int menu_mensaje=0x7f05007a;
-        public static final int menu_publicacion=0x7f050079;
-        public static final int menu_search=0x7f05007b;
+        public static final int menu_logout=0x7f05007b;
+        public static final int menu_mensaje=0x7f050079;
+        public static final int menu_publicacion=0x7f050078;
+        public static final int menu_search=0x7f05007a;
         public static final int middle=0x7f050012;
         public static final int never=0x7f050009;
         public static final int none=0x7f050010;
@@ -1205,7 +1210,6 @@ containing a value of this type.
         public static final int txt_perfil_seguidores=0x7f050068;
         public static final int txt_perfil_siguiendo=0x7f05006a;
         public static final int txt_perfil_username=0x7f050067;
-        public static final int txt_publicacion_descripcion=0x7f050073;
         public static final int txt_publicacion_detail_descripcion=0x7f05004a;
         public static final int txt_publicacion_detail_estrellas=0x7f05004c;
         public static final int txt_publicacion_detail_texto_votos=0x7f05004e;
@@ -1214,11 +1218,12 @@ containing a value of this type.
         public static final int txt_publicacion_detail_titulo=0x7f050049;
         public static final int txt_publicacion_detail_username=0x7f050046;
         public static final int txt_publicacion_detail_votos=0x7f05004f;
+        public static final int txt_publicacion_escrito=0x7f050072;
         public static final int txt_publicacion_numero_comentarios=0x7f050077;
         public static final int txt_publicacion_tiempo=0x7f050071;
         public static final int txt_publicacion_tipo=0x7f050070;
-        public static final int txt_publicacion_titulo=0x7f050072;
-        public static final int txt_publicacion_username=0x7f05006f;
+        public static final int txt_publicacion_titulo=0x7f05006f;
+        public static final int txt_publicacion_username=0x7f050073;
         public static final int txt_publicacion_votos=0x7f050075;
         public static final int up=0x7f050021;
         public static final int useLogo=0x7f050003;
@@ -1332,47 +1337,48 @@ containing a value of this type.
         /**  Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f0a000b;
-        public static final int action_settings=0x7f0a0017;
+        public static final int action_settings=0x7f0a0018;
         public static final int app_name=0x7f0a000d;
-        public static final int crear_publicacion_descripcion=0x7f0a0032;
-        public static final int crear_publicacion_error=0x7f0a0035;
-        public static final int crear_publicacion_publicar=0x7f0a0034;
-        public static final int crear_publicacion_tipo=0x7f0a0033;
-        public static final int crear_publicacion_titulo=0x7f0a0031;
-        public static final int hello_world=0x7f0a0018;
-        public static final int imagen_login=0x7f0a0023;
-        public static final int imagen_registro=0x7f0a0030;
-        public static final int login_buzzter=0x7f0a0024;
-        public static final int login_email=0x7f0a0025;
-        public static final int login_login=0x7f0a0027;
-        public static final int login_password=0x7f0a0026;
-        public static final int login_registrate=0x7f0a0028;
+        public static final int crear_publicacion_descripcion=0x7f0a0033;
+        public static final int crear_publicacion_error=0x7f0a0036;
+        public static final int crear_publicacion_publicar=0x7f0a0035;
+        public static final int crear_publicacion_tipo=0x7f0a0034;
+        public static final int crear_publicacion_titulo=0x7f0a0032;
+        public static final int hello_world=0x7f0a0019;
+        public static final int imagen_login=0x7f0a0024;
+        public static final int imagen_registro=0x7f0a0031;
+        public static final int login_buzzter=0x7f0a0025;
+        public static final int login_email=0x7f0a0026;
+        public static final int login_login=0x7f0a0028;
+        public static final int login_password=0x7f0a0027;
+        public static final int login_registrate=0x7f0a0029;
         public static final int menu_logout=0x7f0a0012;
         public static final int menu_mensaje=0x7f0a0011;
         public static final int menu_publicacion=0x7f0a0010;
         public static final int menu_search=0x7f0a000f;
-        public static final int prueba_comentario=0x7f0a0021;
-        public static final int prueba_comentarios=0x7f0a001e;
-        public static final int prueba_descripcion=0x7f0a001d;
-        public static final int prueba_likes=0x7f0a001f;
-        public static final int prueba_tiempo=0x7f0a001b;
-        public static final int prueba_tipo=0x7f0a001a;
-        public static final int prueba_titulo=0x7f0a001c;
-        public static final int prueba_usuario=0x7f0a0019;
-        public static final int prueba_ver_mas=0x7f0a0020;
-        public static final int publicacion_detail_estrellas=0x7f0a0015;
-        public static final int publicacion_detail_votos=0x7f0a0016;
-        public static final int registro_confirm_password=0x7f0a002e;
-        public static final int registro_descripcion=0x7f0a002a;
-        public static final int registro_email=0x7f0a002c;
-        public static final int registro_password=0x7f0a002d;
-        public static final int registro_registrar=0x7f0a002f;
-        public static final int registro_registro=0x7f0a0029;
-        public static final int registro_user=0x7f0a002b;
+        public static final int prueba_comentario=0x7f0a0022;
+        public static final int prueba_comentarios=0x7f0a001f;
+        public static final int prueba_descripcion=0x7f0a001e;
+        public static final int prueba_likes=0x7f0a0020;
+        public static final int prueba_tiempo=0x7f0a001c;
+        public static final int prueba_tipo=0x7f0a001b;
+        public static final int prueba_titulo=0x7f0a001d;
+        public static final int prueba_usuario=0x7f0a001a;
+        public static final int prueba_ver_mas=0x7f0a0021;
+        public static final int publicacion_detail_estrellas=0x7f0a0016;
+        public static final int publicacion_detail_votos=0x7f0a0017;
+        public static final int publicacion_escrito=0x7f0a0015;
+        public static final int registro_confirm_password=0x7f0a002f;
+        public static final int registro_descripcion=0x7f0a002b;
+        public static final int registro_email=0x7f0a002d;
+        public static final int registro_password=0x7f0a002e;
+        public static final int registro_registrar=0x7f0a0030;
+        public static final int registro_registro=0x7f0a002a;
+        public static final int registro_user=0x7f0a002c;
         public static final int tab_noticias=0x7f0a0013;
         public static final int tab_perfil=0x7f0a0014;
         public static final int title_activity_main=0x7f0a000e;
-        public static final int title_activity_prueba=0x7f0a0022;
+        public static final int title_activity_prueba=0x7f0a0023;
     }
     public static final class style {
         /** 
@@ -1401,11 +1407,14 @@ containing a value of this type.
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f0b008c;
+        public static final int ButtonStyle=0x7f0b0090;
         public static final int BuzzterTheme=0x7f0b008d;
         /**  ActionBar styles 
          */
         public static final int BuzzterTheme_ActionBarStyle=0x7f0b008e;
         public static final int BuzzterTheme_ActionBarStyle_TitleTextStyle=0x7f0b008f;
+        public static final int LinearStyle=0x7f0b0092;
+        public static final int LoginStyle=0x7f0b0091;
         /**  Mimic text appearance in select_dialog_item.xml 
          */
         public static final int TextAppearance_AppCompat_Base_CompactMenu_Dialog=0x7f0b0063;
