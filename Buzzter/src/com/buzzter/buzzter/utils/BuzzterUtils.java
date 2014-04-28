@@ -7,6 +7,8 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.io.StringWriter;
 import java.io.Writer;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
 
 import org.json.JSONArray;
@@ -22,11 +24,30 @@ import com.buzzter.buzzter.models.Usuario;
 public class BuzzterUtils {
 
 	public static Usuario appAuthentication(String username, String password, String jsonString){
-		JSONObject jsonResponse;
 		Usuario usuario = null;
+		HttpURLConnection httpConnection = null;
+		BufferedReader bufferedReader = null;
+		StringBuilder response = new StringBuilder();
+		
 		try {
-			jsonResponse = new JSONObject(jsonString);
-			JSONObject jsonObject = jsonResponse.getJSONObject("objects");
+			URL url = new URL(ConstantsUtils.URL_LOGIN);
+			httpConnection = (HttpURLConnection) url.openConnection();
+			httpConnection.setRequestMethod("GET");
+			
+			httpConnection.setRequestProperty("username", username);
+			httpConnection.setRequestProperty("password", password);
+			httpConnection.setRequestProperty("token", ConstantsUtils.TOKEN);
+			httpConnection.setRequestProperty("Content-Type", "application/json");
+			httpConnection.connect();
+
+			bufferedReader = new BufferedReader(new InputStreamReader(httpConnection.getInputStream()));
+
+			String line;
+			while ((line = bufferedReader.readLine()) != null){            
+				response.append(line);	
+			}
+			
+			JSONObject jsonObject = new JSONObject(response.toString());
 			usuario = new Usuario();
 			usuario.setUsuario_username(jsonObject.getString("username"));
 			usuario.setUsuario_nombre(jsonObject.getString("first_name")+ " " + jsonObject.getString("last_name"));
@@ -34,9 +55,13 @@ public class BuzzterUtils {
 			usuario.setUsuario_isStaff(jsonObject.getBoolean("is_staff"));
 			
 		} 
-		catch (JSONException e) {
+		catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally {
+			if(httpConnection != null){
+				httpConnection.disconnect();
+			}
 		}
 		return usuario;
 	}
@@ -128,6 +153,24 @@ public class BuzzterUtils {
 			e.printStackTrace();
 		}
 		return comentarios;
+	}
+	
+	public Usuario getUsuario(String username){
+		Usuario usuario = new Usuario();
+		try {
+			JSONObject jsonObject = new JSONObject("");
+			usuario.setUsuario_username(jsonObject.getString("username"));
+			usuario.setUsuario_nombre(jsonObject.getString("first_name")+" "+jsonObject.getString("last_name"));
+			usuario.setUsuario_followers(jsonObject.getInt("followers"));
+			usuario.setUsuario_following(jsonObject.getInt("following"));
+			usuario.setUsuario_imgUrl("http://www.buzzter.co"+jsonObject.getString("picture"));
+			
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return usuario;
 	}
 	public static String readFile(Context context, String file) throws IOException{
 		InputStream is = context.getResources().getAssets().open(file);

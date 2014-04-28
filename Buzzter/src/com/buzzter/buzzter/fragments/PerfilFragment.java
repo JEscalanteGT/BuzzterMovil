@@ -44,8 +44,8 @@ public class PerfilFragment extends ListFragment {
 		
 		holder.username.setText(user.getUsuario_username());
 		holder.nombre.setText(user.getUsuario_nombre());
-		holder.followers.setText(Integer.toString(user.getUsuario_followers().size()));
-		holder.following.setText(Integer.toString(user.getUsuario_following().size()));
+		holder.followers.setText(Integer.toString(0));
+		holder.following.setText(Integer.toString(0));
 		holder.buzzies.setText(Integer.toString(user.getUsuario_publicaciones().size()));
 		
 		String json = "";

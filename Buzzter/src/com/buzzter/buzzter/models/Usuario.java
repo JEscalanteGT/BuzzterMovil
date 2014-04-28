@@ -9,12 +9,12 @@ public class Usuario {
 	private String usuario_pais;
 	private String usuario_imgUrl;
 	private boolean usuario_isStaff;
-	private ArrayList<Usuario> usuario_followers;
-	private ArrayList<Usuario> usuario_following;
+	private int usuario_followers;
+	private int usuario_following;
 	private ArrayList<Publicacion> usuario_publicaciones;
 	public Usuario(){
-		this.usuario_followers = new ArrayList<Usuario>();
-		this.usuario_following = new ArrayList<Usuario>();
+		this.usuario_followers = 0;
+		this.usuario_following = 0;
 		this.usuario_publicaciones = new ArrayList<Publicacion>();
 	}
 	public Usuario(String username, String email, String nombre, String imgUrl, boolean isStaff){
@@ -23,8 +23,8 @@ public class Usuario {
 		this.usuario_nombre = nombre;
 		this.usuario_imgUrl = imgUrl;
 		this.usuario_isStaff = isStaff;
-		this.usuario_followers = new ArrayList<Usuario>();
-		this.usuario_following = new ArrayList<Usuario>();
+		this.usuario_followers = 0;
+		this.usuario_following = 0;
 		this.usuario_publicaciones = new ArrayList<Publicacion>();
 	}
 	public String getUsuario_username() {
@@ -57,16 +57,16 @@ public class Usuario {
 	public void setUsuario_imgUrl(String usuario_imgUrl) {
 		this.usuario_imgUrl = usuario_imgUrl;
 	}
-	public ArrayList<Usuario> getUsuario_followers() {
+	public int getUsuario_followers() {
 		return usuario_followers;
 	}
-	public void setUsuario_followers(ArrayList<Usuario> usuario_followers) {
+	public void setUsuario_followers(int usuario_followers) {
 		this.usuario_followers = usuario_followers;
 	}
-	public ArrayList<Usuario> getUsuario_following() {
+	public int getUsuario_following() {
 		return usuario_following;
 	}
-	public void setUsuario_following(ArrayList<Usuario> usuario_following) {
+	public void setUsuario_following(int usuario_following) {
 		this.usuario_following = usuario_following;
 	}
 	public ArrayList<Publicacion> getUsuario_publicaciones() {
@@ -74,12 +74,6 @@ public class Usuario {
 	}
 	public void setUsuario_publicaciones(ArrayList<Publicacion> usuario_publicaciones) {
 		this.usuario_publicaciones = usuario_publicaciones;
-	}
-	public void add_follower(Usuario usuario){
-		this.usuario_followers.add(usuario);
-	}
-	public void add_following(Usuario usuario){
-		this.usuario_following.add(usuario);
 	}
 	public void add_publicacion(Publicacion publicacion){
 		this.usuario_publicaciones.add(publicacion);

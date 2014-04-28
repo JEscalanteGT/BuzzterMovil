@@ -16,10 +16,12 @@
             android:id="@+id/logo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:maxHeight="128dp"
             android:layout_gravity="center_horizontal"
             android:contentDescription="@string/imagen_login"
-            android:scaleType="centerCrop"
-            android:src="@drawable/abc_ab_bottom_solid_dark_holo" />
+            android:scaleType="centerInside"
+            android:src="@drawable/androidlogo"
+            android:adjustViewBounds="true" />
 
         <LinearLayout
             android:layout_width="match_parent"
