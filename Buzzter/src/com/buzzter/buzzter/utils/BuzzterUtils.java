@@ -30,6 +30,7 @@ public class BuzzterUtils {
 		StringBuilder response = new StringBuilder();
 		
 		try {
+			/*
 			URL url = new URL(ConstantsUtils.URL_LOGIN+"?user=jescalante&password=Jorge123");
 			httpConnection = (HttpURLConnection) url.openConnection();
 			httpConnection.setRequestMethod("GET");
@@ -43,9 +44,9 @@ public class BuzzterUtils {
 			String line;
 			while ((line = bufferedReader.readLine()) != null){            
 				response.append(line);	
-			}
+			} */
 			
-			JSONObject jsonObject = new JSONObject(response.toString());
+			JSONObject jsonObject = new JSONObject(jsonString);
 			usuario = new Usuario();
 			usuario.setUsuario_username(jsonObject.getString("username"));
 			usuario.setUsuario_nombre(jsonObject.getString("first_name")+ " " + jsonObject.getString("last_name"));
