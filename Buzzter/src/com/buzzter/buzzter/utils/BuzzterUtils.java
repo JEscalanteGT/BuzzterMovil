@@ -30,16 +30,14 @@ public class BuzzterUtils {
 		StringBuilder response = new StringBuilder();
 		
 		try {
-			URL url = new URL(ConstantsUtils.URL_LOGIN);
+			URL url = new URL(ConstantsUtils.URL_LOGIN+"?user=jescalante&password=Jorge123");
 			httpConnection = (HttpURLConnection) url.openConnection();
 			httpConnection.setRequestMethod("GET");
 			
-			httpConnection.setRequestProperty("username", username);
-			httpConnection.setRequestProperty("password", password);
-			httpConnection.setRequestProperty("token", ConstantsUtils.TOKEN);
+			httpConnection.setRequestProperty("oAuth", ConstantsUtils.TOKEN);
 			httpConnection.setRequestProperty("Content-Type", "application/json");
 			httpConnection.connect();
-
+			Log.d("DEBUG", "PASO PRUEBA");
 			bufferedReader = new BufferedReader(new InputStreamReader(httpConnection.getInputStream()));
 
 			String line;

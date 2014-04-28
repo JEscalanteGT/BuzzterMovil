@@ -7,16 +7,10 @@ import android.view.ViewConfiguration;
 
 public class ConstantsUtils {
 	
-	public static final String URL_ROOT_TWITTER_API = "https://api.twitter.com";
-	public static final String URL_SEARCH = URL_ROOT_TWITTER_API + "/1.1/search/tweets.json?q=";
-	public static final String URL_AUTHENTICATION = URL_ROOT_TWITTER_API + "/oauth2/token";
-
 	public static final String URL_ROOT_API = "http://192.241.160.246/v1";
 	public static final String URL_LOGIN = URL_ROOT_API + "/login/";
 	
-	public static final String TOKEN= "Your Consumer Key";
-	
-	public static final String MEJORANDROID_TERM = "mejorandroid";
+	public static final String TOKEN= "e888592bbc451e6b082c1afadb42600a6dfc8796";
 	
 	public static final void showOverflowMenu(Context context){
 		try {

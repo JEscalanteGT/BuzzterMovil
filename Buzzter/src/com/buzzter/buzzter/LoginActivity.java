@@ -57,9 +57,9 @@ public class LoginActivity extends ActionBarActivity {
     					// TODO Auto-generated catch block
     					e.printStackTrace();
     				}          
-                    if(usuario.equals("admin")&& password.equals("1234")){
-                    	new AsyncLogin().execute(usuario,password,mensaje);
-                    }
+                    
+    				new AsyncLogin().execute(usuario,password,mensaje);
+                    
             	}
             });   
             
