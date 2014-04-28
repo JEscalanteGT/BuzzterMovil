@@ -1,0 +1,14 @@
+{
+ "id" : 1,
+ "comments": 1,
+ "descripcion": "Muy buena serie, aunque no la he visto",
+ "fecha": "2014-02-19T09:25:54",
+ "link": "http://es.wikipedia.org/wiki/Hostages_(serie_de_televisi%C3%B3n)",
+ "linkImagen": "http://blogs.infobae.com/series-de-tv/files/2013/10/hostages.jpg",
+ "rating": 1.0,
+ "resource_uri": "/v1/posts/1/",
+ "tags": "series",
+ "titulo": "Hostages",
+ "user": "T4r0_o",
+ "user_uri": "/v1/user/T4r0_o/"
+}

@@ -12,4 +12,11 @@
     <color name="activity_button">#0064AD</color>
  	<color name="activity_button_border">#0051b3</color>
  	<color name="activity_button_text">#FFFFFF</color>
+ 	
+ 	<color name="publicacion_tipo_background">#F0F0F0</color>
+ 	<color name="shape_musica">#27aaf1</color>
+ 	<color name="shape_pelicula">#6e27f1</color>
+ 	<color name="shape_serie">#f12745</color>
+ 	<color name="shape_artbook">#2745f1</color>
+ 	<color name="shape_poster">#d327f1</color>
 </resources>

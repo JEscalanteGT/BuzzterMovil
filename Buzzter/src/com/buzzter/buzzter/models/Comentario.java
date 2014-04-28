@@ -5,6 +5,9 @@ public class Comentario {
 	private String comentario_fecha;
 	private String comentario_comentario;
 	private Usuario comentario_usuario;
+	public Comentario(){
+		
+	}
 	public Comentario(int id, String fecha, String comentario, Usuario usuario){
 		this.setId(id);
 		this.comentario_fecha = fecha;

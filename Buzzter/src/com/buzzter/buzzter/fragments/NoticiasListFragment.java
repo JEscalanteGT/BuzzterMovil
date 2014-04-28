@@ -47,17 +47,16 @@ public class NoticiasListFragment extends ListFragment {
 	public void onListItemClick(ListView l, View v, int position, long id) {
 		Publicacion publicacion = (Publicacion) l.getItemAtPosition(position);
 		Intent intent = new Intent(getActivity(), PublicacionActivity.class);
-		intent.putExtra(PublicacionActivity.USERNAME, publicacion.getUsuario().getUsuario_username());
-		intent.putExtra(PublicacionActivity.TIPO, publicacion.getPublicacion_tag());
-		intent.putExtra(PublicacionActivity.TIEMPO, publicacion.getPublicacion_fecha());
-		intent.putExtra(PublicacionActivity.TITULO, publicacion.getPublicacion_titulo());
-		intent.putExtra(PublicacionActivity.DESCRIPCION, publicacion.getPublicacion_descripcion());
+		intent.putExtra(PublicacionActivity.IDPUBLICACION, Integer.toString(publicacion.getId()));
 		
 		startActivity(intent);
 	}
 	
 	private void updateListView(ArrayList<Publicacion> publicaciones){
-		setListAdapter(new PublicacionesAdapter(getActivity(), publicaciones));
+		if(publicaciones != null){
+			setListAdapter(new PublicacionesAdapter(getActivity(), publicaciones));
+		}
+		
 	}
 	
 	class TimelineSearchTask extends AsyncTask<String, Void, ArrayList<Publicacion>>{
@@ -69,7 +68,6 @@ public class NoticiasListFragment extends ListFragment {
 		protected void onPreExecute() {
 			// TODO Auto-generated method stub
 			super.onPreExecute();
-			super.onPreExecute();
 			progressDialog = new ProgressDialog(getActivity());
 			progressDialog.setMessage(getResources().getString(R.string.timeline_cargando_posts));
 			progressDialog.show();
@@ -80,7 +78,8 @@ public class NoticiasListFragment extends ListFragment {
 			// TODO Auto-generated method stub
 			username = params[0];
 			jsonString = params[1];
-			ArrayList<Publicacion> publicaciones = BuzzterUtils.getTimeline(username, jsonString);
+			ArrayList<Publicacion> publicaciones = new ArrayList<Publicacion>();
+			publicaciones = BuzzterUtils.getTimeline(username, jsonString, true);
 			
 			return publicaciones;
 		}

@@ -48,6 +48,8 @@ public class PublicacionesAdapter extends ArrayAdapter<Publicacion> {
 		BitmapManager.getInstance().loadBitmap(publicacion_actual.getPublicacion_img_link(), holder.img);
 		holder.username.setText(publicacion_actual.getUsuario().getUsuario_username());
 		holder.tipo.setText(publicacion_actual.getPublicacion_tag());
+		holder.tipo.setBackgroundResource(getTipoBackground(publicacion_actual.getPublicacion_tag()));
+		
 		holder.tiempo.setText(publicacion_actual.getPublicacion_fecha());
 		holder.titulo.setText(publicacion_actual.getPublicacion_titulo());
 		holder.comentarios.setText(Integer.toString(publicacion_actual.getPublicacion_numero_comentarios()));
@@ -55,6 +57,22 @@ public class PublicacionesAdapter extends ArrayAdapter<Publicacion> {
 		return convertView;
 	}
 
+	private int getTipoBackground(String cadena){
+		int background = R.drawable.shape;
+		if(cadena.equals("musica"))
+			background = R.drawable.shape_musica;
+		if(cadena.equals("pelicula"))
+			background = R.drawable.shape_pelicula;
+		if(cadena.equals("art-book"))
+			background = R.drawable.shape_artbook;
+		if(cadena.equals("poster"))
+			background = R.drawable.shape_poster;
+		if(cadena.equals("serie"))
+			background = R.drawable.shape_serie;
+		
+		return background;
+		
+	}
 	private static class ViewHolder{
 		public ImageView img;
 		public TextView username;

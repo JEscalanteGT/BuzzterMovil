@@ -15,6 +15,7 @@ public class Publicacion {
 	private int publicacion_numero_comentarios;
 	private ArrayList<Comentario> publicacion_comentarios;
 	public Publicacion(){
+		
 		this.publicacion_comentarios = new ArrayList<Comentario>();
 	}
 	public Publicacion(int id, Usuario usuario, String fecha, String tag,String titulo, String descripcion, String img_link, String link, Double rating){

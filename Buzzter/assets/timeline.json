@@ -1,3 +1,4 @@
+
 {
  "objects": [{
  "id": 1,
@@ -21,7 +22,7 @@
  "linkImagen": "http://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Android_robot.svg/512px-Android_robot.svg.png",
  "rating": 3.0,
  "resource_uri": "/v1/posts/3/",
- "tags": "musica",
+ "tags": "pelicula",
  "titulo": "Common",
  "user": "admin",
  "user_uri": "/v1/user/admin/"

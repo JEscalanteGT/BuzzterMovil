@@ -1,0 +1,17 @@
+{"objects": [{
+ "comentario": "Bueno, definitivamente creo que la veré",
+ "fecha": "2013-11-11",
+ "resource_uri": "/v1/comment/1/",
+ "user": "T4r0_o",
+ "user_uri": "/v1/user/T4r0_o/",
+"post_id":1,
+"post_uri":"/v1/post/1/"
+ },{
+ "comentario": "Este es un comentario",
+ "fecha": "2013-11-11",
+ "resource_uri": "/v1/comment/2/",
+ "user": "T4r0_o",
+ "user_uri": "/v1/user/T4r0_o/",
+"post_id": 1,
+"post_uri": "/v1/post/1/"
+ }]}

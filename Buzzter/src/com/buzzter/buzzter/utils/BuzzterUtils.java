@@ -14,7 +14,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.content.Context;
+import android.util.Log;
 
+import com.buzzter.buzzter.models.Comentario;
 import com.buzzter.buzzter.models.Publicacion;
 import com.buzzter.buzzter.models.Usuario;
 public class BuzzterUtils {
@@ -39,7 +41,7 @@ public class BuzzterUtils {
 		return usuario;
 	}
 	
-	public static ArrayList<Publicacion> getTimeline(String username, String jsonString){
+	public static ArrayList<Publicacion> getTimeline(String username, String jsonString, Boolean opcion){
 		ArrayList<Publicacion> publicaciones = new ArrayList<Publicacion>();
 		JSONObject jsonResponse;
 		try {
@@ -52,6 +54,7 @@ public class BuzzterUtils {
 				Publicacion publicacion = new Publicacion();
 				publicacion.setId(jsonObject.getInt("id"));
 				publicacion.setPublicacion_titulo(jsonObject.getString("titulo"));
+				publicacion.setPublicacion_descripcion(jsonObject.getString("descripcion"));
 				publicacion.setPublicacion_tipo(jsonObject.getString("tags"));
 				publicacion.setPublicacion_fecha(jsonObject.getString("fecha"));
 				Usuario usuario = new Usuario();
@@ -71,6 +74,60 @@ public class BuzzterUtils {
 			e.printStackTrace();
 		}
 		return publicaciones;
+	}
+	
+	public static Publicacion getPublicacion(String id, String jsonString, String jsonComentarios){
+		Publicacion publicacion = new Publicacion();
+		try {
+			JSONObject jsonObject = new JSONObject(jsonString);
+			publicacion.setId(jsonObject.getInt("id"));
+			publicacion.setPublicacion_titulo(jsonObject.getString("titulo"));
+			publicacion.setPublicacion_descripcion(jsonObject.getString("descripcion"));
+			publicacion.setPublicacion_tipo(jsonObject.getString("tags"));
+			publicacion.setPublicacion_fecha(jsonObject.getString("fecha"));
+			Usuario usuario = new Usuario();
+			usuario.setUsuario_username(jsonObject.getString("user"));
+			publicacion.setUsuario(usuario);
+			publicacion.setPublicacion_numero_comentarios(jsonObject.getInt("comments"));
+			publicacion.setPublicacion_rating(jsonObject.getDouble("rating"));
+			publicacion.setPublicacion_img_link(jsonObject.getString("linkImagen"));
+			publicacion.setPublicacion_link(jsonObject.getString("link"));
+			
+			publicacion.setPublicacion_comentarios(getComentarios(id, jsonComentarios));
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return publicacion;
+	}
+	
+	public static ArrayList<Comentario> getComentarios(String id, String jsonString){
+		ArrayList<Comentario> comentarios = new ArrayList<Comentario>();
+		JSONObject jsonResponse;
+		try {
+			jsonResponse = new JSONObject(jsonString);
+			Log.d("DEBUG", jsonString+"");
+			JSONArray jsonArray = jsonResponse.getJSONArray("objects");
+			JSONObject jsonObject;
+			
+			for (int i = 0; i < jsonArray.length(); i++) {
+				jsonObject = (JSONObject) jsonArray.get(i);
+				Comentario comentario = new Comentario();
+				comentario.setComentario_comentario(jsonObject.getString("comentario"));
+				comentario.setComentario_fecha(jsonObject.getString("fecha"));
+				Usuario usuario = new Usuario();
+				usuario.setUsuario_username(jsonObject.getString("user"));
+				comentario.setComentario_usuario(usuario);
+				comentarios.add(comentario);
+			}
+			
+		} 
+		catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return comentarios;
 	}
 	public static String readFile(Context context, String file) throws IOException{
 		InputStream is = context.getResources().getAssets().open(file);
